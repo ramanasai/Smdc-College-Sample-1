@@ -1,0 +1,322 @@
+import 'package:flutter/material.dart';
+import 'loader.dart';
+void main() => runApp(sem1());
+
+class sem1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: MyHomePage(
+        title: 'My Flutter',    
+      ),
+    );
+  }
+}
+
+class notifi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(children: <Widget>[
+            Text(
+              'Notification',
+              style:TextStyle(
+                fontSize: 40,
+                color: Colors.white,
+              )
+            )
+          ],),
+        ),
+      backgroundColor: Colors.red,
+      bottomNavigationBar: BottomAppBar
+      (
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(                
+               icon: Icon(Icons.notifications),
+               color: Colors.blue,
+                onPressed: () {
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.chat),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>chat()),);
+              },
+              ),
+              IconButton(
+              icon: Icon(Icons.note),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>note()),);
+              },
+              ),
+              IconButton(
+               icon: Icon(Icons.table_chart),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>time()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.account_box),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>account()),);
+              },
+              ),
+          ]
+        ),
+      ),
+      ),
+    );
+  }
+}
+class chat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey,
+      bottomNavigationBar: BottomAppBar
+      (
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(                
+               icon: Icon(Icons.notifications),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>notifi()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.chat),
+              color: Colors.blue,
+              onPressed: () {
+              },
+              ),
+              IconButton(
+              icon: Icon(Icons.note),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>note()),);
+              },
+              ),
+              IconButton(
+               icon: Icon(Icons.table_chart),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>time()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.account_box),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>account()),);
+              },
+              ),
+          ]
+        ),
+      ),
+    );
+  }
+}
+class note extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //Department
+      //Sem 
+      //Subjects
+      backgroundColor: Colors.lightBlueAccent,
+      bottomNavigationBar: BottomAppBar
+      (
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(                
+               icon: Icon(Icons.notifications),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>notifi()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.chat),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>chat()),);
+              },
+              ),
+              IconButton(
+              icon: Icon(Icons.note),
+              color: Colors.red,
+              onPressed: () {},
+              ),
+              IconButton(
+               icon: Icon(Icons.table_chart),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>time()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.account_box),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>account()),);
+              },
+              ),
+          ]
+        ),
+      ),
+    );
+  }
+}
+class time extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //Time Table
+
+      backgroundColor: Colors.yellowAccent,
+      bottomNavigationBar: BottomAppBar
+      (
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(                
+               icon: Icon(Icons.notifications),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>notifi()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.chat),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>chat()),);
+              },
+              ),
+              IconButton(
+              icon: Icon(Icons.note),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>note()),);
+              },
+              ),
+              IconButton(
+               icon: Icon(Icons.table_chart),
+               color: Colors.blue,
+                onPressed: () {},
+               ),
+              IconButton(
+              icon: Icon(Icons.account_box),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>account()),);
+              },
+              ),
+          ]
+        ),
+      ),
+    );
+  }
+}
+class account extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.purple,
+        floatingActionButton:FloatingActionButton.extended(
+        elevation: 2,
+        icon: Icon(Icons.ac_unit),
+        label: Text('logout'),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>(MyHomePage())),);
+        },
+        ),
+      bottomNavigationBar: BottomAppBar
+      (
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(                
+               icon: Icon(Icons.notifications),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>notifi()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.chat),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>chat()),);
+              },
+              ),
+              IconButton(
+              icon: Icon(Icons.note),
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>note()),);
+              },
+              ),
+              IconButton(
+               icon: Icon(Icons.table_chart),
+               color: Colors.black,
+                onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>time()),);
+                },
+               ),
+              IconButton(
+              icon: Icon(Icons.account_box),
+              color: Colors.blue,
+              onPressed: () {},
+              ),
+          ]
+        ),
+      ),
+    );
+  }
+}
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> 
+{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        floatingActionButton:FloatingActionButton.extended(
+        elevation: 2,
+        icon: Icon(Icons.ac_unit),
+        label: Text('login'),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>notifi()),);
+        },
+        ),
+      ),
+    );
+  }
+}
